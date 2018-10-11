@@ -5,7 +5,7 @@ SwiftWamp is a based to [Swamp 0.1.0](https://github.com/iscriptology/swamp/rele
 
 It currently supports calling and register remote procedures, subscribing on topics, and publishing events. It also supports authentication using ticket & wampcra authentication.
 
-SwiftWamp `0.3` use WebSockets as its only available transport, and JSON as its serialization method.
+SwiftWamp `0.3.1` use WebSockets as its only available transport, and JSON as its serialization method.
 
 Contributions will be merged gladly!
 

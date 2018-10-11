@@ -48,22 +48,22 @@ open class WebSocketSwampTransport: SwampTransport, WebSocketDelegate {
 
     // MARK: WebSocketDelegate
 
-    open func websocketDidConnect(socket: WebSocket) {
+    open func websocketDidConnect(socket: WebSocketClient) {
         // TODO: Check which serializer is supported by the server, and choose self.mode and serializer
         delegate?.swampTransportDidConnectWithSerializer(JSONSwampSerializer())
     }
 
-    open func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        delegate?.swampTransportDidDisconnect(error, reason: self.disconnectionReason)
+    open func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        delegate?.swampTransportDidDisconnect(error as NSError?, reason: self.disconnectionReason)
     }
 
-    open func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+    open func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
         if let data = text.data(using: String.Encoding.utf8) {
             self.websocketDidReceiveData(socket: socket, data: data)
         }
     }
 
-    open func websocketDidReceiveData(socket: WebSocket, data: Data) {
+    open func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
         delegate?.swampTransportReceivedData(data)
     }
 }

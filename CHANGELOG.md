@@ -1,5 +1,9 @@
 # Change Log
 ## [0.3.0](https://github.com/pitput/SwiftWamp/releases/tag/0.3.0)
+* Compatibility with new Starscream version
+* Update dependencies
+
+## [0.3.0](https://github.com/pitput/SwiftWamp/releases/tag/0.3.0)
 * Compatibility with latest swift version
 * Update dependencies
 

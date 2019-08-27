@@ -21,5 +21,5 @@ the WAMP WebSocket subprotocol implemented purely in Swift
   s.dependency 'SwiftyJSON'
   s.dependency 'Starscream'
   s.dependency 'CryptoSwift'
-  s.dependency 'SwiftWebSocket', :git => 'https://github.com/hackiftekhar/SwiftWebSocket.git', :tag => 'v2.8.1'
+  s.dependency 'SwiftWebSocket'
 end

@@ -17,7 +17,7 @@ open class Subscription {
     internal let queue: DispatchQueue
     internal var eventCallback: EventCallback
     fileprivate var isActive: Bool = true
-    open let topic: String
+    public let topic: String
 
     internal init(session: SwampSession, subscription: NSNumber, onEvent: @escaping EventCallback, topic: String, queue: DispatchQueue) {
         self.session = session

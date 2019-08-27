@@ -20,7 +20,7 @@ open class Registration {
     internal let queue: DispatchQueue
     internal var onFire: SwampProc
     fileprivate var isActive: Bool = true
-    open let proc: String
+    public let proc: String
 
     internal init(session: SwampSession, registration: NSNumber, onFire: @escaping SwampProc, proc: String, queue: DispatchQueue) {
         self.session = session

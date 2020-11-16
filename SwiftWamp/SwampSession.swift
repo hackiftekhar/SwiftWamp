@@ -436,10 +436,10 @@ open class SwampSession: SwampTransportDelegate {
     // MARK: SwampTransportDelegate
 
     open func swampTransportDidDisconnect(_ error: NSError?, reason: String?) {
-        if reason != nil {
-            self.delegate?.swampSessionEnded(reason!)
-        } else if error != nil {
-            self.delegate?.swampSessionEnded("Unexpected error: \(error!.description)")
+        if let reason = reason {
+            self.delegate?.swampSessionEnded(reason)
+        } else if let error = error {
+            self.delegate?.swampSessionEnded("Unexpected error: \(error.description)")
         } else {
             self.delegate?.swampSessionEnded("Unknown error.")
             if self.autoReconnect {

@@ -18,7 +18,7 @@ open class SwiftWebSocketTransport: SwampTransport {
     }
 
     open var delegate: SwampTransportDelegate?
-    private let socket: SwiftWebSocket.WebSocket
+    private let socket: SwiftWebSocket
     private var wsEndPoint: String
     let mode: WebsocketMode
 
@@ -27,7 +27,7 @@ open class SwiftWebSocketTransport: SwampTransport {
     public init(wsEndpoint: String, selfSignedSSL: Bool = false, compression: Bool = false) {
         self.mode = .text
         self.wsEndPoint = wsEndpoint
-        self.socket = SwiftWebSocket.WebSocket()
+        self.socket = SwiftWebSocket()
         self.socket.allowSelfSignedSSL = selfSignedSSL
         self.socket.compression.on = compression
 

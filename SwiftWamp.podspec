@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftWamp'
-  s.version          = '0.3.5'
+  s.version          = '0.3.6'
   s.summary          = 'WAMP protocol implementation in swift'
 
   s.description      = <<-DESC
@@ -13,8 +13,8 @@ the WAMP WebSocket subprotocol implemented purely in Swift
   s.source            = { :git => 'https://github.com/hackiftekhar/SwiftWamp.git', :tag => s.version.to_s }
   s.documentation_url = 'https://github.com/hackiftekhar/SwiftWamp/blob/master/README.md'
 
-  s.platform = :ios, '8.0'
-  s.ios.deployment_target = '8.0'
+  s.platform = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'SwiftWamp/**/*.{h,swift}'
 
